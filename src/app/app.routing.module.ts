@@ -3,11 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AccountComponent } from './account/account.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'account', pathMatch: 'full' },
-    { path: 'account', component: AccountComponent }
+    { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({
@@ -15,3 +14,4 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const AppRoutingComponents = [HomeComponent];

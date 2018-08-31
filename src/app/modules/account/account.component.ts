@@ -25,7 +25,7 @@ export class RegisterViewModel {
   lastName: String;
   email: String;
   gender: String;
-  dob: Date;
+  dob: String;
   password: String;
 
   constructor() {
@@ -33,7 +33,8 @@ export class RegisterViewModel {
     this.lastName = '';
     this.email = '';
     this.gender = '';
-    this.dob = new Date();
+    const m = new Date();
+    this.dob = m.getUTCDate() + '/' + (m.getUTCMonth() + 1) + '/' + m.getUTCFullYear();
     this.password = '';
   }
 
