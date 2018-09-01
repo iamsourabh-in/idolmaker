@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BrowserBridgeService } from '../../services/BrowserBridge.service';
+import { BrowserBridgeService } from '../../../../services/BrowserBridge.service';
 
 @Component({
   selector: 'app-left-nav',
