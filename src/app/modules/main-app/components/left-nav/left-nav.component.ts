@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BrowserBridgeService } from '../../../../services/BrowserBridge.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-left-nav',
@@ -8,14 +9,18 @@ import { BrowserBridgeService } from '../../../../services/BrowserBridge.service
 })
 export class LeftNavComponent implements OnInit {
 
-  constructor(private _window: BrowserBridgeService) { }
+  constructor(private _window: BrowserBridgeService, private _router: Router) { }
 
   ngOnInit() {
     // this._window.body.init();
   }
 
-  open() {
+  openSideNav() {
     this._window.body.init();
+  }
+  routeTo(route: string) {
+    this._router.navigate(['home/'+route]);
+    this.openSideNav();
   }
 
 }

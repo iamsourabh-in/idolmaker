@@ -3,7 +3,7 @@
 <div class="fixed-sidebar">
   <div class="fixed-sidebar-left sidebar--small" id="sidebar-left">
 
-    <a (click)="open()" class="logo">
+    <a (click)="openSideNav()" class="logo">
       <div class="img-wrap">
         <img src="assets/img/logo.png" alt="Olympus">
       </div>
@@ -12,13 +12,13 @@
     <div class="mCustomScrollbar" data-mcs-theme="dark">
       <ul class="left-menu">
         <li>
-          <a (click)="open()" class="js-sidebar-open">
+          <a (click)="openSideNav()" class="js-sidebar-open">
             <svg class="olymp-menu-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="OPEN MENU"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-menu-icon"></use></svg>
           </a>
         </li>
         <li>
-          <a routerLink="feeds">
+          <a (click)="routeTo('feeds')">
             <svg class="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="NEWSFEED"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
           </a>
@@ -30,7 +30,7 @@
           </a>
         </li> -->
         <li>
-          <a routerLink="friends">
+          <a (click)="routeTo('friends')">
             <svg class="olymp-happy-faces-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="FRIENDS"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use></svg>
           </a>
@@ -54,7 +54,7 @@
           </a>
         </li> -->
         <li>
-          <a routerLink="badges">
+          <a (click)="routeTo('badges')">
             <svg class="olymp-badge-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Community Badges"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-badge-icon"></use></svg>
           </a>
@@ -66,7 +66,7 @@
           </a>
         </li> -->
         <li>
-          <a routerLink="stats">
+          <a (click)="routeTo('stats')">
             <svg class="olymp-stats-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Account Stats"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-stats-icon"></use></svg>
           </a>
@@ -82,7 +82,7 @@
   </div>
 
   <div class="fixed-sidebar-left sidebar--large" id="sidebar-left-1">
-    <a (click)="open()" class="logo">
+    <a (click)="openSideNav()" class="logo">
       <div class="img-wrap">
         <img src="assets/img/logo.png" alt="Olympus">
       </div>
@@ -94,13 +94,13 @@
     <div class="mCustomScrollbar" data-mcs-theme="dark">
       <ul class="left-menu">
         <li>
-          <a (click)="open()" class="js-sidebar-open">
+          <a (click)="openSideNav()" class="js-sidebar-open">
             <svg class="olymp-close-icon left-menu-icon"><use xlink:href="assets/svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
             <span class="left-menu-title">Collapse Menu</span>
           </a>
         </li>
         <li>
-          <a routerLink="feeds">
+          <a (click)="routeTo('feeds')">
             <svg class="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="NEWSFEED"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
             <span class="left-menu-title">Newsfeed</span>
@@ -114,7 +114,7 @@
           </a>
         </li> -->
         <li>
-          <a routerLink="friends">
+          <a (click)="routeTo('friends')">
             <svg class="olymp-happy-faces-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="FRIENDS"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use></svg>
             <span class="left-menu-title">Friends</span>
@@ -142,7 +142,7 @@
           </a>
         </li> -->
         <li>
-          <a routerLink="badges">
+          <a (click)="routeTo('badges')">
             <svg class="olymp-badge-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Community Badges"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-badge-icon"></use></svg>
             <span class="left-menu-title">Community Badges</span>
@@ -156,7 +156,7 @@
           </a>
         </li> -->
         <li>
-          <a routerLink="stats">
+          <a (click)="routeTo('stats')">
             <svg class="olymp-stats-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Account Stats"><use
                 xlink:href="assets/svg-icons/sprites/icons.svg#olymp-stats-icon"></use></svg>
             <span class="left-menu-title">Account Stats</span>
@@ -199,14 +199,14 @@
 <div class="fixed-sidebar fixed-sidebar-responsive">
 
   <div class="fixed-sidebar-left sidebar--small" id="sidebar-left-responsive">
-    <a (click)="open()" class="logo js-sidebar-open">
+    <a (click)="openSideNav()" class="logo js-sidebar-open">
       <img src="assets/img/logo.png" alt="Olympus">
     </a>
 
   </div>
 
   <div class="fixed-sidebar-left sidebar--large" id="sidebar-left-1-responsive">
-    <a (click)="open()" class="logo">
+    <a (click)="openSideNav()" class="logo">
       <div class="img-wrap">
         <img src="assets/img/logo.png" alt="Olympus">
       </div>
@@ -238,13 +238,13 @@
 
       <ul class="left-menu">
           <li>
-            <a (click)="open()" class="js-sidebar-open">
+            <a (click)="openSideNav()" class="js-sidebar-open">
               <svg class="olymp-close-icon left-menu-icon"><use xlink:href="assets/svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
               <span class="left-menu-title">Collapse Menu</span>
             </a>
           </li>
           <li>
-            <a routerLink="feeds">
+            <a (click)="routeTo('feeds')">
               <svg class="olymp-newsfeed-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="NEWSFEED"><use
                   xlink:href="assets/svg-icons/sprites/icons.svg#olymp-newsfeed-icon"></use></svg>
               <span class="left-menu-title">Newsfeed</span>
@@ -258,7 +258,7 @@
             </a>
           </li> -->
           <li>
-            <a routerLink="friends">
+            <a (click)="routeTo('friends')">
               <svg class="olymp-happy-faces-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="FRIENDS"><use
                   xlink:href="assets/svg-icons/sprites/icons.svg#olymp-happy-faces-icon"></use></svg>
               <span class="left-menu-title">Friends</span>
@@ -286,7 +286,7 @@
             </a>
           </li> -->
           <li>
-            <a routerLink="badges">
+            <a (click)="routeTo('badges')">
               <svg class="olymp-badge-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Community Badges"><use
                   xlink:href="assets/svg-icons/sprites/icons.svg#olymp-badge-icon"></use></svg>
               <span class="left-menu-title">Community Badges</span>
@@ -300,7 +300,7 @@
             </a>
           </li> -->
           <li>
-            <a routerLink="stats">
+            <a (click)="routeTo('stats')">
               <svg class="olymp-stats-icon left-menu-icon" data-toggle="tooltip" data-placement="right" data-original-title="Account Stats"><use
                   xlink:href="assets/svg-icons/sprites/icons.svg#olymp-stats-icon"></use></svg>
               <span class="left-menu-title">Account Stats</span>
