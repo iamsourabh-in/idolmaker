@@ -7,6 +7,13 @@ import { AccountModule } from './modules/account/account.module';
 import { BrowserBridgeService } from './services/BrowserBridge.service';
 import { MainAppModule } from './modules/main-app/main-app.module';
 
+import { JwtModule } from '@auth0/angular-jwt';
+import { HttpMetaInfoService } from './services/HttpMetaInfo.service';
+
+export function tokenGetter() {
+  return localStorage.getItem('access_token');
+}
+
 
 @NgModule({
   declarations: [
@@ -19,9 +26,16 @@ import { MainAppModule } from './modules/main-app/main-app.module';
     FormsModule,
     AppRoutingModule,
     AccountModule,
-    MainAppModule
+    MainAppModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ['localhost:3001'],
+        blacklistedRoutes: ['localhost:3001/auth/']
+      }
+    })
   ],
-  providers: [BrowserBridgeService],
+  providers: [BrowserBridgeService, HttpMetaInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

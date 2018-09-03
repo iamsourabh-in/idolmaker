@@ -19,8 +19,8 @@ export class LeftNavComponent implements OnInit {
     this._window.body.init();
   }
   routeTo(route: string) {
-    this._router.navigate(['home/'+route]);
-    this.openSideNav();
+    this._router.navigate(['home/' + route]);
+    this._window.body.closeSideBar();
   }
 
 }

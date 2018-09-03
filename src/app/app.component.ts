@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpMetaInfoService } from './services/HttpMetaInfo.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'idolmaker';
+
+  constructor(private _metaInfoService: HttpMetaInfoService) {
+    this._metaInfoService.getMetaInfo('https://angular.io/');
+
+  }
+
+
 }

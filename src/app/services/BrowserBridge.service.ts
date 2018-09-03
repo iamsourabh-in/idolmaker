@@ -41,4 +41,5 @@ export interface AppExtention {
 export interface BodyInit {
     init(): void;
     toggleSideBar(): void;
+    closeSideBar(): void;
 }
