@@ -8,6 +8,8 @@ import { StatsComponent } from './stats/stats.component';
 import { WeatherWidgetComponent } from './components/weather-widget/weather-widget.component';
 import { CalendarWidgetComponent } from './components/calendar-widget/calendar-widget.component';
 import { AddPostWidgetComponent } from './components/add-post-widget/add-post-widget.component';
+import { SettingsComponent } from './settings/settings.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 
 
@@ -31,6 +33,40 @@ const routes: Routes = [
             {
                 path: 'stats',
                 component: StatsComponent,
+            },
+            {
+                path: 'settings',
+                component: SettingsComponent,
+            },
+            {
+                path: 'profile/:id',
+                component: UserProfileComponent,
+                children: [
+                    {
+                        path: 'main',
+                        component: NewsFeedComponent,
+                    },
+                    {
+                        path: 'images',
+                        component: FriendsComponent,
+                    },
+                    {
+                        path: 'about',
+                        component: BadgesComponent,
+                    },
+                    {
+                        path: 'videos',
+                        component: StatsComponent,
+                    },
+                    {
+                        path: 'settings',
+                        component: SettingsComponent,
+                    },
+                    {
+                        path: 'profile',
+                        component: UserProfileComponent,
+                    }
+                ]
             }
         ]
     },
@@ -43,4 +79,4 @@ const routes: Routes = [
 })
 export class MainAppRoutingModule { }
 export const MainAppRoutingComponents = [HomeComponent, NewsFeedComponent, FriendsComponent, BadgesComponent,
-    StatsComponent, WeatherWidgetComponent, CalendarWidgetComponent,AddPostWidgetComponent];
+    StatsComponent, WeatherWidgetComponent, CalendarWidgetComponent, AddPostWidgetComponent, SettingsComponent, UserProfileComponent];

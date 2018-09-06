@@ -5,6 +5,9 @@ import { MainAppRoutingComponents, MainAppRoutingModule } from './main-app.routi
 import { LeftNavComponent } from './components/left-nav/left-nav.component';
 import { RightBarComponent } from './components/right-bar/right-bar.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
+import { UserImagesComponent } from './user-images/user-images.component';
+import { UserVideosComponent } from './user-videos/user-videos.component';
+import { UserAboutComponent } from './user-about/user-about.component';
 
 @NgModule({
   imports: [
@@ -13,6 +16,10 @@ import { TopBarComponent } from './components/top-bar/top-bar.component';
   ],
   declarations: [...MainAppRoutingComponents, LeftNavComponent,
     RightBarComponent,
-    TopBarComponent]
+    TopBarComponent,
+    UserImagesComponent,
+    UserVideosComponent,
+    UserAboutComponent,
+  ]
 })
 export class MainAppModule { }

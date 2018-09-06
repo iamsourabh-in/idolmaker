@@ -24,4 +24,13 @@ export class WeatherWidgetComponent implements OnInit {
     );
   }
 
+  getDateCustom() {
+    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+      'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const d = new Date();
+    return weekdays[d.getDay()] + ', ' + monthNames[d.getMonth()] + ' ' + d.getDate() + 'th';
+  }
+
 }

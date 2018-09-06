@@ -1,19 +1,41 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpRequest } from 'selenium-webdriver/http';
-
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
+import { JwtHelperService } from '@auth0/angular-jwt';
+import { BehaviorSubject } from 'rxjs';
+import { LoginViewModel } from '../models/LoginViewModel';
 
 @Injectable()
 export class AccountService {
+    baseAuthUrl = 'https://localhost/api/auth/';
+    jwtHelper = new JwtHelperService();
+    decodedToken: any;
+    currentUser: any;
+    // photoUrl = new BehaviorSubject<string>('../../assets/user.png');
+    // currentPhotoUrl = this.photoUrl.asObservable();
 
     constructor(private http: HttpClient) {
 
     }
 
-    authenticate(username: String, password: String) {
-        // return this.http.send({
-        //     "heroesUrl": "api/heroes",
-        //     "textfile": "assets/textfile.txt"
-        // });
+    // changeMemberPhoto(photoUrl: string) {
+    //     this.photoUrl.next(photoUrl);
+    // }
+    authenticate(loginRequest: LoginViewModel) {
+        return this.http.post(this.baseAuthUrl + 'login', loginRequest);
+        // .pipe(
+        //     map((response: any) => {
+        //         const user = response;
+        //         if (user) {
+        //             // localStorage.setItem('token', user.token);
+        //             // localStorage.setItem('user', JSON.stringify(user.user));
+        //             // this.decodedToken = this.jwtHelper.decodeToken(user.token);
+        //             // this.currentUser = user.user;
+        //             // this.changeMemberPhoto(this.currentUser.photoUrl);
+        //         }
+        //     })
+        // );
+
     }
 
 

@@ -9,6 +9,7 @@ import { MainAppModule } from './modules/main-app/main-app.module';
 
 import { JwtModule } from '@auth0/angular-jwt';
 import { HttpMetaInfoService } from './services/HttpMetaInfo.service';
+import { AppCommonModule } from './modules/app-common/app-common.module';
 
 export function tokenGetter() {
   return localStorage.getItem('access_token');
@@ -25,6 +26,7 @@ export function tokenGetter() {
     BrowserModule,
     FormsModule,
     AppRoutingModule,
+    AppCommonModule,
     AccountModule,
     MainAppModule,
     JwtModule.forRoot({

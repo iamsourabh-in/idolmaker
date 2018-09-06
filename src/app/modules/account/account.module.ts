@@ -5,14 +5,17 @@ import { AccountRoutingModule } from './account.routing.module';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
+import { AccountService } from './services/account.service';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     AccountRoutingModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  declarations: [AccountComponent, RegisterComponent]
+  declarations: [AccountComponent, RegisterComponent],
+  providers: [AccountService]
 })
 export class AccountModule { }
