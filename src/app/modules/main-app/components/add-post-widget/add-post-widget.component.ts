@@ -9,10 +9,21 @@ import { HttpClient, HttpRequest, HttpEventType } from '@angular/common/http';
 export class AddPostWidgetComponent implements OnInit {
   public progress: number;
   public message: string;
-  public imgURL: String = 'https://iceclog.com/wp-content/uploads/2016/09/596px-Internet1.jpg';
+  public imgURL: any = null; // 'https://iceclog.com/wp-content/uploads/2016/09/596px-Internet1.jpg';
+  public youtubeLink: String = 'https://www.youtube.com/watch?v=nSDgHBxUbVQ';
+  public youtubeDefaultImageLink: String = 'http://i4.ytimg.com/vi/XXXXX/default.jpg';
   ngOnInit() { }
 
   constructor(private http: HttpClient) { }
+
+
+
+  getyoutubeURL() {
+    const len = this.youtubeLink.length;
+    const code = this.youtubeLink.split('?v=')[1];
+    console.log(this.youtubeDefaultImageLink.replace('XXXXX', code))
+    return this.youtubeDefaultImageLink.replace('XXXXX', code);
+  }
 
   upload(files) {
 

@@ -5,21 +5,18 @@ import { MainAppRoutingComponents, MainAppRoutingModule } from './main-app.routi
 import { LeftNavComponent } from './components/left-nav/left-nav.component';
 import { RightBarComponent } from './components/right-bar/right-bar.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
-import { UserImagesComponent } from './user-images/user-images.component';
-import { UserVideosComponent } from './user-videos/user-videos.component';
-import { UserAboutComponent } from './user-about/user-about.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     MainAppRoutingModule
   ],
   declarations: [...MainAppRoutingComponents, LeftNavComponent,
     RightBarComponent,
     TopBarComponent,
-    UserImagesComponent,
-    UserVideosComponent,
-    UserAboutComponent,
+
   ]
 })
 export class MainAppModule { }

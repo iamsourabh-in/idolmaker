@@ -10,6 +10,11 @@ import { CalendarWidgetComponent } from './components/calendar-widget/calendar-w
 import { AddPostWidgetComponent } from './components/add-post-widget/add-post-widget.component';
 import { SettingsComponent } from './settings/settings.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserTimelineComponent } from './user-timeline/user-timeline.component';
+import { UserPhotosComponent } from './user-photos/user-photos.component';
+import { UserAboutComponent } from './user-about/user-about.component';
+import { UserVideosComponent } from './user-videos/user-videos.component';
+import { UserImagesComponent } from './user-images/user-images.component';
 
 
 
@@ -43,24 +48,20 @@ const routes: Routes = [
                 component: UserProfileComponent,
                 children: [
                     {
-                        path: 'main',
-                        component: NewsFeedComponent,
+                        path: 'timeline',
+                        component: UserTimelineComponent,
                     },
                     {
-                        path: 'images',
-                        component: FriendsComponent,
+                        path: 'photos',
+                        component: UserPhotosComponent,
                     },
                     {
                         path: 'about',
-                        component: BadgesComponent,
+                        component: UserAboutComponent,
                     },
                     {
                         path: 'videos',
-                        component: StatsComponent,
-                    },
-                    {
-                        path: 'settings',
-                        component: SettingsComponent,
+                        component: UserVideosComponent,
                     },
                     {
                         path: 'profile',
@@ -78,5 +79,17 @@ const routes: Routes = [
     exports: [RouterModule]
 })
 export class MainAppRoutingModule { }
-export const MainAppRoutingComponents = [HomeComponent, NewsFeedComponent, FriendsComponent, BadgesComponent,
-    StatsComponent, WeatherWidgetComponent, CalendarWidgetComponent, AddPostWidgetComponent, SettingsComponent, UserProfileComponent];
+export const MainAppRoutingComponents = [HomeComponent,
+    NewsFeedComponent,
+    FriendsComponent,
+    BadgesComponent,
+    StatsComponent,
+    WeatherWidgetComponent,
+    CalendarWidgetComponent,
+    AddPostWidgetComponent,
+    SettingsComponent,
+    UserImagesComponent,
+    UserVideosComponent,
+    UserAboutComponent,
+    UserTimelineComponent,
+    UserPhotosComponent, UserProfileComponent];
