@@ -7,7 +7,6 @@ import { LoginViewModel } from '../models/LoginViewModel';
 @Injectable()
 export class AccountService {
     baseAuthUrl = 'https://localhost/api/auth/';
-    jwtHelper = new JwtHelperService();
     decodedToken: any;
     currentUser: any;
     // photoUrl = new BehaviorSubject<string>('../../assets/user.png');

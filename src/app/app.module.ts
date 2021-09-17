@@ -27,14 +27,7 @@ export function tokenGetter() {
     AppRoutingModule,
     AppCommonModule,
     AccountModule,
-    MainAppModule,
-    JwtModule.forRoot({
-      config: {
-        tokenGetter: tokenGetter,
-        whitelistedDomains: ['localhost:3001'],
-        blacklistedRoutes: ['localhost:3001/auth/']
-      }
-    })
+    MainAppModule
   ],
   providers: [BrowserBridgeService, HttpMetaInfoService],
   bootstrap: [AppComponent]
