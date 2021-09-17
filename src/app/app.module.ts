@@ -7,7 +7,6 @@ import { AccountModule } from './modules/account/account.module';
 import { BrowserBridgeService } from './services/BrowserBridge.service';
 import { MainAppModule } from './modules/main-app/main-app.module';
 
-import { JwtModule } from '@auth0/angular-jwt';
 import { HttpMetaInfoService } from './services/HttpMetaInfo.service';
 import { AppCommonModule } from './modules/app-common/app-common.module';
 
