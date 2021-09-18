@@ -3,6 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2. and Upgraded to Angular 11.
 
 
+A User can register and login.
+
+![](https://github.com/iamsourabh-in/idolmaker/blob/master/login.JPG)
+![](https://github.com/iamsourabh-in/idolmaker/blob/master/home.jpg)
+
 # Initial Setup
 
 ## Development server
